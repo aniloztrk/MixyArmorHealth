@@ -1,0 +1,39 @@
+name: MixyArmorHealth
+version: '${project.version}'
+main: mixy.armor.health.mixyarmorhealth.MixyArmorHealth
+api-version: 1.17
+authors: [ Mixy ]
+commands:
+  armorsethealth:
+    usage: ''
+    description: ''
+    aliases:
+      - 'asethealth'
+      - 'asethp'
+  armoraddlore:
+    usage: ''
+    description: ''
+    aliases:
+      - 'aaddlore'
+  armorsetname:
+    usage: ''
+    description: ''
+    aliases:
+      - 'asetname'
+  armorremovehealth:
+    usage: ''
+    description: ''
+    aliases:
+      - 'aremovehealth'
+      - 'arhealth'
+  armorhealth:
+    usage: ''
+    description: ''
+    aliases:
+      - 'ahealth'
+  armordellastlore:
+    usage: ''
+    description: ''
+    aliases:
+      - 'adellore'
+      - 'adellastlore'
