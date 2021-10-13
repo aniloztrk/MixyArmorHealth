@@ -13,18 +13,13 @@ public class ArmorHealthManager {
 
         int maxhealth = config.getInt("player-default-health");
 
-        if (inv.getChestplate() != null) {
-            maxhealth += PersistentDataContainerUtil.getInteger(inv.getChestplate(), "Health");
-        }
-        if (inv.getHelmet() != null) {
-            maxhealth += PersistentDataContainerUtil.getInteger(inv.getHelmet(), "Health");
-        }
-        if (inv.getLeggings() != null) {
-            maxhealth += PersistentDataContainerUtil.getInteger(inv.getLeggings(), "Health");
-        }
-        if (inv.getBoots() != null) {
-            maxhealth += PersistentDataContainerUtil.getInteger(inv.getBoots(), "Health");
-        }
+        if (inv.getChestplate() != null) maxhealth += PersistentDataContainerUtil.getInteger(inv.getChestplate(), "Health");
+        
+        if (inv.getHelmet() != null) maxhealth += PersistentDataContainerUtil.getInteger(inv.getHelmet(), "Health");
+        
+        if (inv.getLeggings() != null) maxhealth += PersistentDataContainerUtil.getInteger(inv.getLeggings(), "Health");
+        
+        if (inv.getBoots() != null) maxhealth += PersistentDataContainerUtil.getInteger(inv.getBoots(), "Health");
 
         player.setMaxHealth(maxhealth);
     }
