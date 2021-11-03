@@ -5,11 +5,13 @@ import mixy.armor.health.mixyarmorhealth.Events.*;
 import mixy.armor.health.mixyarmorhealth.Utils.RegisterUtil;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class MixyArmorHealth extends JavaPlugin {
+public final class MixyArmorHealth extends JavaPlugin 
+{
 
     public static MixyArmorHealth Instance;
     @Override
-    public void onEnable() {
+    public void onEnable() 
+    {
         Instance = this;
 
         getConfig().options().copyDefaults();
