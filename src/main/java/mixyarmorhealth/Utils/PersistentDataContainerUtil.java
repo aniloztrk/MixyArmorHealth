@@ -7,9 +7,12 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 
-public class PersistentDataContainerUtil {
-    public static boolean hasInteger(ItemStack itemStack, String key) {
-        if (itemStack.hasItemMeta()) {
+public class PersistentDataContainerUtil 
+{
+    public static boolean hasInteger(ItemStack itemStack, String key) 
+    {
+        if (itemStack.hasItemMeta()) 
+        {
             ItemMeta itemMeta = itemStack.getItemMeta();
             NamespacedKey namespacedKey = new NamespacedKey(MixyArmorHealth.Instance, key);
             PersistentDataContainer persistentDataContainer = itemMeta.getPersistentDataContainer();
@@ -17,15 +20,18 @@ public class PersistentDataContainerUtil {
         }
         return false;
     }
-    public static void putInteger(String key, int value, ItemStack itemStack) {
+    public static void putInteger(String key, int value, ItemStack itemStack) 
+    {
         ItemMeta itemMeta = itemStack.getItemMeta();
         NamespacedKey namespacedKey = new NamespacedKey(MixyArmorHealth.Instance, key);
         PersistentDataContainer persistentDataContainer = itemMeta.getPersistentDataContainer();
         persistentDataContainer.set(namespacedKey, PersistentDataType.INTEGER, value);
         itemStack.setItemMeta(itemMeta);
     }
-    public static int getInteger(ItemStack itemStack, String key) {
-        if (itemStack.hasItemMeta()) {
+    public static int getInteger(ItemStack itemStack, String key) 
+    {
+        if (itemStack.hasItemMeta()) 
+        {
             ItemMeta itemMeta = itemStack.getItemMeta();
             NamespacedKey namespacedKey = new NamespacedKey(MixyArmorHealth.Instance, key);
             PersistentDataContainer persistentDataContainer = itemMeta.getPersistentDataContainer();
@@ -33,7 +39,8 @@ public class PersistentDataContainerUtil {
         }
         return 0;
     }
-    public static void removeTag(ItemStack itemStack, String key) {
+    public static void removeTag(ItemStack itemStack, String key) 
+    {
         ItemMeta itemMeta = itemStack.getItemMeta();
         NamespacedKey namespacedKey = new NamespacedKey(MixyArmorHealth.Instance, key);
         PersistentDataContainer persistentDataContainer = itemMeta.getPersistentDataContainer();
